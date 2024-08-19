@@ -3,14 +3,15 @@ package utils
 import (
 	"database/sql"
 	"fmt"
+	"regexp"
 	"time"
 
 	//注册驱动器 _下划线表示执行驱动中的init函数，不使用其他函数
 	_ "github.com/go-sql-driver/mysql"
 )
 
-func Aaa() {
-	fmt.Println("AAAA")
+func Aaa(param string) string {
+	return regexp.MustCompile(`[,;/?'_]+`).ReplaceAllString(param, "")
 }
 
 func ConnectMysql() (*sql.DB, error) {

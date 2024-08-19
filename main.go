@@ -24,7 +24,7 @@ type User struct {
 
 func main() {
 
-	utils.Aaa()
+	fmt.Println(utils.Aaa("1,1,2,3,1,3,?23::"))
 
 	fun.Test1()
 
