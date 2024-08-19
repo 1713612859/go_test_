@@ -9,6 +9,10 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 )
 
+func Aaa() {
+	fmt.Println("AAAA")
+}
+
 func ConnectMysql() (*sql.DB, error) {
 	// Use environment variables for sensitive information
 	dbUser := "root"

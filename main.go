@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
+	"go_test/fun"
+	"go_test/utils"
 	"log"
 	"time"
-
-	"go_test/utils"
 )
 
 /*
@@ -23,6 +23,10 @@ type User struct {
 }
 
 func main() {
+
+	utils.Aaa()
+
+	fun.Test1()
 
 	// user := User{
 	// 	UserId:     uuid.NewString(),
@@ -45,9 +49,9 @@ func main() {
 	// }
 	// fmt.Printf("insertd row is ,%d", DELETED)
 
-	users := QueryAllUser()
+	// users := QueryAllUser()
 
-	fmt.Printf("users is %+v", users)
+	// fmt.Printf("users is %+v", users)
 
 }
 
@@ -144,4 +148,5 @@ func QueryAllUser() []User {
 		s = append(s, u)
 	}
 	return s
+
 }
